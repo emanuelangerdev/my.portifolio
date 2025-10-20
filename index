@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portifólio</title>
+  
+  <!-- Google fonts - Inter & Beth Ellen -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5275FF',
+            secondary: '#AFE0FF', 
+            accent: '#F6FF00',    
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            bethEllen: ['Beth Ellen', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Basic CSS -->
+  <link rel="stylesheet" href="css/index.css">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-black text-white">
+  
+<!-- Navbar e Sombra -->
+<header class="fixed top-0 left-0 w-full">
+  <div class="z-0 h-32 bg-gradient-to-b from-primary/15 to-transparent w-full"></div>
+  <div class="z-50 absolute top-0 left-1/2 transform -translate-x-1/2 flex gap-8 shadow shadow-black/20
+              bg-white/5 backdrop-blur-md w-fit mx-auto px-9 py-3 rounded-b-full text border border-white/20 border-t-0">
+      <a href="#hero-section" class="transition-300 ease-in-out hover:text-secondary relative group">
+          Inicio
+          <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
+      </a>
+      <a href="#projetos-section" class="transition-300 ease-in-out hover:text-secondary relative group">
+          Projetos
+          <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
+      </a>
+      <a href="" class="transition-300 ease-in-out hover:text-secondary relative group">
+          Habilidades
+          <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
+      </a>
+      <a href="" class="transition-300 ease-in-out hover:text-secondary relative group">
+          Contato
+          <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
+      </a>
+  </div>
+</header>
+
+<!-- Para compensar a altura da nav -->
+<div class="h-32"></div>
+
+<!-- Hero -->
+<section id="hero-section">
+  <div class="flex gap-4 p-8 mx-auto">
+    <!-- Coluna da esquerda -->
+    <div class="w-1/2 ml-24">
+      <!-- Titulo e subtitulo -->
+      <h1 class="text-8xl text-primary font-bethEllen mt-12 whitespace-nowrap">Emanuel Langer</h1>
+      <h2 class="text-gray-200/80 ml-1 text-xl mt-4">Desenvolvedor Full-Stack</h2>
+      
+      <!-- Paragrafo -->
+      <p class="mt-12 text-xl max-w-3xl border-l-2 border-secondary/70 pl-2 ml-1 text-gray-100">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+        omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+      </p>
+      
+      <!-- Botões -->
+      <div class="flex gap-4 mt-12 ml-1">
+        <button class="bg-primary/60 px-4 py-2 rounded border border-primary font-semibold shadow-xl shadow-primary/10 transition-[1s] ease-in-out hover:bg-primary/80 hover:shadow-primary/20">
+          Baixar CV <i class="bi bi-download text-xl ml-2"></i>
+        </button>
+        <button class="bg-primary/40 px-4 py-2 rounded border border-primary font-semibold shadow-xl shadow-primary/10 transition-[1s] ease-in-out hover:bg-primary/60 hover:shadow-primary/20">
+          Contate-me <i class="bi bi-arrow-right text-xl ml-2"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Coluna da direita-->
+    <div class="w-1/2">
+      <div class="relative w-max mx-auto mt-24 rounded-full">
+        <!-- Foto -->
+        <div class="relative z-10 h-[350px] w-[350px] rounded-full bg-primary/50 border-2 border-primary shadow-2xl shadow-primary/30"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Divisória de section -->
+<!-- <hr class="mt-48 w-[88%] mx-auto border-gray-800 "> -->
+<h3 class="px-2 py-1 mx-auto bg-primary/30 rounded font-mono w-fit mt-48 border border-primary shadow shadow-primary/15">
+  Meus Projetos
+</h3>
+
+<section id="projetos-section" class="mt-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-[88%] mx-auto">
+    <!-- Card 1 -->
+    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
+      <h4 class="text-secondary text-xl font-semibold ml-2">
+        Sistema de aluguel e gerênciamento de Mupis
+      </h4>
+
+      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
+      <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries
+        </p>
+      </div>
+
+      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
+      <div class="flex">
+        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
+          <i class="bi bi-github text-lg"></i> Ver repositório
+        </a>
+        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
+          <i class="bi bi-arrow-right text-lg"></i> Acessar
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
+      <h4 class="text-secondary text-xl font-semibold ml-2">
+        Sistema de aluguel e gerênciamento de Mupis
+      </h4>
+
+      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
+      <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries
+        </p>
+      </div>
+
+      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
+      <div class="flex">
+        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
+          <i class="bi bi-github text-lg"></i> Ver repositório
+        </a>
+        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
+          <i class="bi bi-arrow-right text-lg"></i> Acessar
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
+      <h4 class="text-secondary text-xl font-semibold ml-2">
+        Sistema de aluguel e gerênciamento de Mupis
+      </h4>
+
+      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
+      <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries
+        </p>
+      </div>
+
+      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
+      <div class="flex">
+        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
+          <i class="bi bi-github text-lg"></i> Ver repositório
+        </a>
+        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
+          <i class="bi bi-arrow-right text-lg"></i> Acessar
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
+      <h4 class="text-secondary text-xl font-semibold ml-2">
+        Sistema de aluguel e gerênciamento de Mupis
+      </h4>
+
+      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
+      <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries
+        </p>
+      </div>
+
+      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
+      <div class="flex">
+        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
+          <i class="bi bi-github text-lg"></i> Ver repositório
+        </a>
+        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
+          <i class="bi bi-arrow-right text-lg"></i> Acessar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mx-auto max-w-3xl mt-[200px] mb-24">
+  <h2 class="text-secondary text-4xl font-semibold">Futuramente</h2>
+  <p class="mt-6 text-xl max-w-3xl border-l-2 border-secondary/70 pl-2 ml-1 text-gray-100">
+    Futuramente, pretendo adicionar projetos reais ao portfólio, juntamente com seções/funcionalidades que ainda não foram implementadas, como
+    por exemplo: habilidades e contato. Quero tambem implementar um modo claro para o site, e adicionar um arquivo PDF real de curriculo para download.
+  </p>
+
+</div>
+
+<div class="h-32 bg-gradient-to-t from-primary/10 to-transparent w-full"></div>
+<footer class="w-full bg-white/5 border-t border-white/20 h-24 flex justify-center items-center gap-8">
+  <p class="text-sm text-gray-300">© 2025 Emanuel Garcia Langer. Todos os direitos reservados.</p>
+  <p class="text-sm text-gray-300">Feito com ❤ por Emanuel</p>
+</footer>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleciona todos os links de âncora que começam com #
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          // Impede o comportamento de clique padrão do navegador
+          e.preventDefault();
+
+          // Pega o destino do link a partir do atributo href
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          // Verifica se o elemento de destino existe na página
+          if (targetElement) {
+            // Altura do deslocamento (offset)
+            const offset = 250;
+
+            // Calcula a posição do alvo ajustando o offset
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            // Rola a página suavemente para a posição calculada
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
