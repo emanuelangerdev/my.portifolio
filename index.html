@@ -117,7 +117,6 @@
         Sistema de aluguel e gerênciamento de Mupis
       </h4>
 
-      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
       <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
@@ -126,7 +125,6 @@
         </p>
       </div>
 
-      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
       <div class="flex">
         <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
           <i class="bi bi-github text-lg"></i> Ver repositório
@@ -143,7 +141,7 @@
         Sistema de aluguel e gerênciamento de Mupis
       </h4>
 
-      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
+     
       <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
@@ -152,7 +150,6 @@
         </p>
       </div>
 
-      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
       <div class="flex">
         <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
           <i class="bi bi-github text-lg"></i> Ver repositório
@@ -169,7 +166,6 @@
         Sistema de aluguel e gerênciamento de Mupis
       </h4>
 
-      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
       <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
@@ -178,7 +174,6 @@
         </p>
       </div>
 
-      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
       <div class="flex">
         <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
           <i class="bi bi-github text-lg"></i> Ver repositório
@@ -195,7 +190,6 @@
         Sistema de aluguel e gerênciamento de Mupis
       </h4>
 
-      <!-- Esta div com grow ocupará o espaço disponível, empurrando o elemento seguinte para baixo -->
       <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
@@ -204,7 +198,6 @@
         </p>
       </div>
 
-      <!-- A div dos botões agora é um item flex separado e será empurrada para o fundo -->
       <div class="flex">
         <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
           <i class="bi bi-github text-lg"></i> Ver repositório
@@ -236,26 +229,26 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Seleciona todos os links de âncora que começam com #
+
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-          // Impede o comportamento de clique padrão do navegador
+          
           e.preventDefault();
 
-          // Pega o destino do link a partir do atributo href
+          
           const targetId = this.getAttribute('href').substring(1);
           const targetElement = document.getElementById(targetId);
 
-          // Verifica se o elemento de destino existe na página
+          
           if (targetElement) {
             // Altura do deslocamento (offset)
             const offset = 250;
 
-            // Calcula a posição do alvo ajustando o offset
+            
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-            // Rola a página suavemente para a posição calculada
+            
             window.scrollTo({
               top: offsetPosition,
               behavior: 'smooth'
