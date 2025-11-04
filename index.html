@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scrollbar-style">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,15 +29,45 @@
     }
   </script>
   
+  <!-- CSS Básico -->
   <link rel="stylesheet" href="css/index.css">
   
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- Scrollbar -->
+  <style>
+    .scrollbar-style::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    .scrollbar-style::-webkit-scrollbar-track {
+      background: #1a1a2e;
+      border-radius: 10px;
+    }
+
+    .scrollbar-style::-webkit-scrollbar-thumb {
+      background-color: #222c56;
+      border-radius: 10px;
+      border: 2px solid #1a1a2e;
+    }
+
+    .scrollbar-style::-webkit-scrollbar-thumb:hover {
+      background-color: #37426D;
+    }
+
+    .scrollbar-style {
+      scrollbar-width: thin;
+      scrollbar-color: #222c56 #1a1a2e;
+    }
+  </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white scrollbar-style">
   
 <header class="fixed top-0 left-0 w-full">
   <div class="z-0 h-32 bg-gradient-to-b from-primary/15 to-transparent w-full"></div>
-  <div class="z-50 absolute top-0 left-1/2 transform -translate-x-1/2 flex gap-4 md:gap-8 shadow shadow-black/20
+  <div class="z-[99999] absolute top-0 left-1/2 transform -translate-x-1/2 flex gap-4 md:gap-8 shadow shadow-black/20
               bg-white/5 backdrop-blur-md w-fit mx-auto px-4 sm:px-9 py-3 rounded-b-full text border border-white/20 border-t-0">
       <a href="#hero-section" class="transition-300 ease-in-out hover:text-secondary relative group">
           Inicio
@@ -47,11 +77,11 @@
           Projetos
           <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
       </a>
-      <a href="" class="transition-300 ease-in-out hover:text-secondary relative group">
+      <a href="#habilidades-section" class="transition-300 ease-in-out hover:text-secondary relative group">
           Habilidades
           <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
       </a>
-      <a href="" class="transition-300 ease-in-out hover:text-secondary relative group">
+      <a href="#contato-section" class="transition-300 ease-in-out hover:text-secondary relative group">
           Contato
           <span class="absolute top-5 left-0 w-0 h-0.5 bg-secondary transition-500 group-hover:w-full"></span>
       </a>
@@ -96,149 +126,345 @@
 
 <section id="projetos-section" class="mt-8">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-[88%] mx-auto">
-    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
+    <!-- Projeto 1 -->
+    <article class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
       <h4 class="text-secondary text-xl font-semibold ml-2">
-        Sistema de aluguel e gerênciamento de Mupis
+        Sistema de aluguel e gerenciamento de Mupis
       </h4>
 
       <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries
+          Projeto desenvolvido na Mobhis Automação Urbana. Trata-se de um sistema de aluguel de mupis. O sistema foi desenvolvido tanto para o publico, tanto para a equipe.
+          Por trás da seção pública, há diversas páginas focando no gerenciamento de clientes, objetos, pedidos etc.
+          O repositório desse projeto é privado, pois trata-se de um sistema empresarial.
         </p>
       </div>
 
       <div class="flex">
-        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
+        <a style="cursor: not-allowed;" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2 transition-300 hover:bg-primary/70 hover:shadow hover:shadow-primary/30">
           <i class="bi bi-github text-lg"></i> Ver repositório
         </a>
-        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
+        <a href="https://sisooh.mobhis.com.br/" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2 transition-300 hover:bg-primary/40 hover:shadow hover:shadow-primary/30">
           <i class="bi bi-arrow-right text-lg"></i> Acessar
         </a>
       </div>
-    </div>
+    </article>
 
-    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
+    <!-- Projeto 2 -->
+    <article class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
       <h4 class="text-secondary text-xl font-semibold ml-2">
-        Sistema de aluguel e gerênciamento de Mupis
+        Blog Neocities estilo medieval
       </h4>
 
      
       <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries
+          Meu blog pessoal, mantido por hobby. Nele exponho meus interesses, numa interface estilo medieval. Hospedo esse meu blog no Neocities, uma plataforma da <i>indie web,</i>
+          onde as pessoas deixam seus sites de paixão. Blogs são pedaços da antiga web, antes das redes sociais existirem, onde resquisios de uma criatividade na web sobrevivem.
         </p>
       </div>
 
       <div class="flex">
-        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
+        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2 transition-300 hover:bg-primary/70 hover:shadow hover:shadow-primary/30">
           <i class="bi bi-github text-lg"></i> Ver repositório
         </a>
-        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
+        <a href="https://macchiato-dungeon.neocities.org" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2 transition-300 hover:bg-primary/40 hover:shadow hover:shadow-primary/30">
           <i class="bi bi-arrow-right text-lg"></i> Acessar
         </a>
       </div>
-    </div>
+    </article>
 
-    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
-      <h4 class="text-secondary text-xl font-semibold ml-2">
-        Sistema de aluguel e gerênciamento de Mupis
-      </h4>
+    <!-- Projeto 3 -->
+    <article class="flex flex-col w-auto h-[500px] bg-white/5 opacity-50 rounded-lg border-2 border-dashed border-white/30 p-8 shadow-2xl shadow-primary/10">
+      
+    </article>
 
-      <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries
-        </p>
-      </div>
+    <!-- Projeto 4-->
+    <article class="flex flex-col w-auto h-[500px] bg-white/5 opacity-50 rounded-lg border-2 border-dashed border-white/30 p-8 shadow-2xl shadow-primary/10">
+      
+    </article>
+  </div>
+</section>
 
-      <div class="flex">
-        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
-          <i class="bi bi-github text-lg"></i> Ver repositório
-        </a>
-        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
-          <i class="bi bi-arrow-right text-lg"></i> Acessar
-        </a>
-      </div>
-    </div>
 
-    <div class="flex flex-col w-auto h-[500px] bg-white/5 rounded-lg border-2 border-white/20 p-8 shadow-2xl shadow-primary/10">
-      <h4 class="text-secondary text-xl font-semibold ml-2">
-        Sistema de aluguel e gerênciamento de Mupis
-      </h4>
+<h3 class="px-2 py-1 mx-auto bg-primary/30 rounded font-mono w-fit mt-18 sm:mt-48 border border-primary shadow shadow-primary/15">
+  Minhas Habilidades
+</h3>
 
-      <div class="grow bg-gray-900/30 p-3 mt-4 text-gray-200 rounded border border-gray-800/50">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries
-        </p>
-      </div>
+<section id="habilidades-section" class="mt-8">
+  <div class="mx-auto max-w-5xl">
+    <div class="flex flex-wrap justify-center gap-6 p-4">
 
-      <div class="flex">
-        <a href="" class="w-1/2 h-12 bg-primary/50 flex justify-center items-center rounded-bl border-2 border-primary/50 gap-2">
-          <i class="bi bi-github text-lg"></i> Ver repositório
-        </a>
-        <a href="" class="w-1/2 h-12 bg-primary/30 flex justify-center items-center rounded-br border-2 border-primary/50 border-l-0 gap-2">
-          <i class="bi bi-arrow-right text-lg"></i> Acessar
-        </a>
+      <!-- Habilidade: HTML -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> HTML
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Proficiência na estruturação semântica de páginas web e integração de elementos multimídia e formulários. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Detalhes
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: CSS -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> CSS
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Especialista em design responsivo, animações, e frameworks modernos como Tailwind CSS e Bootstrap. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Detalhes
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: Python -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> Python
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Experiência em desenvolvimento backend, automação de scripts e análise de dados com foco em clean code. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: Django -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> Django
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Criação de aplicações web robustas e escaláveis utilizando o framework Django (ORM, Admin, Views).
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: REST API -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> REST API
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Desenvolvimento de interfaces de programação de aplicações (APIs) eficientes e bem documentadas (DRF).
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: Soft Skills -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> Soft Skills
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Comunicação eficaz, trabalho em equipe, resolução de problemas e adaptabilidade em ambientes dinâmicos.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: Metodologias Ágeis -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> Metodologias Ágeis
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Experiência com Scrum e Kanban para gerenciamento de projetos e entregas contínuas e iterativas.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: Git -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> Git
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Controle de versão utilizando Git e plataformas como GitHub/GitLab para colaboração e gestão de código.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
+
+      <!-- Habilidade: Docker -->
+      <article class="flex flex-col w-64 h-[250px] bg-white/5 rounded-lg border-2 border-white/20 p-6 shadow-2xl shadow-primary/10">
+        <h4 class="text-secondary text-xl font-semibold mb-3">
+          <i class="bi bi-arrow-right text-lg"></i> Docker
+        </h4>
+        
+        <div class="relative grow overflow-hidden rounded border border-gray-800/50">
+          <div class="h-full p-3 text-gray-200 overflow-y-auto pb-16"> 
+            <p class="text-sm">
+              Orquestração e conteinerização de aplicações para garantir ambientes de desenvolvimento e produção consistentes.
+            </p>
+          </div>
+          <!-- gradiente -->
+          <div class="absolute bottom-10 left-0 right-0 h-10 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
+          
+          <a href="#" class="absolute bottom-0 left-0 right-0 h-10 bg-[#222c56] flex justify-center items-center rounded-b border-2 border-primary/50 border-t-0 gap-2 transition-300 hover:bg-[#37426D] hover:shadow hover:shadow-primary/30 z-20">
+            Experiência
+          </a>
+        </div>
+      </article>
       </div>
     </div>
   </div>
 </section>
 
-<div class="mx-auto max-w-3xl mt-[100px] sm:mt-[200px] mb-24 px-4">
-  <h2 class="text-secondary text-4xl font-semibold">Futuramente</h2>
-  <p class="mt-6 text-xl max-w-3xl border-l-2 border-secondary/70 pl-2 ml-1 text-gray-100">
-    Futuramente, pretendo adicionar projetos reais ao portfólio, juntamente com seções/funcionalidades que ainda não foram implementadas, como
-    por exemplo: habilidades e contato. Quero tambem implementar um modo claro para o site, e adicionar um arquivo PDF real de curriculo para download.
-  </p>
 
-</div>
+<h3 class="px-2 py-1 mx-auto bg-primary/30 rounded font-mono w-fit mt-24 sm:mt-48 border border-primary shadow shadow-primary/15 mt-18">
+  Contate-me
+</h3>
 
+<!-- Contato - Email com formspree -->
+<section id="contato-section" class="mt-8 mx-auto max-w-xl">
+
+  <form
+  action="https://formspree.io/f/xnnokbkj"
+  method="POST"
+>
+    <label for="email" class="text-sm text-secondary font-mono p-2 bg-[#0d0d0d] border-white/50 border border-white/50 rounded border-b-0" style="transform: translateY(-5px); margin-bottom: -5px;">
+      Seu e-mail:
+    </label>
+    <input type="email" name="email" id="email" required class="w-full rounded h-8 bg-[#0d0d0d] border border-white/50 text-sm text-gray-100 font-mono mb-8 p-2">
+
+    <label for="message" class="text-sm text-secondary font-mono p-2 bg-[#0d0d0d] border-white/50 border border-white/50 rounded border-b-0" style="transform: translateY(-5px); margin-bottom: -5px;">
+      Mensagem:
+    </label>
+    <textarea name="message" id="message" required class="p-2 resize-none w-full rounded h-[125px] bg-[#0d0d0d] border border-white/50 text-sm text-gray-100 font-mono"></textarea>
+
+    <div id="aviso"></div>
+
+    <div class="mt-8 flex justify-between">
+      <button type="submit" onclick="aviso()" class="bg-primary/60 text-sm px-3 py-1 rounded border border-primary font-semibold shadow-xl shadow-primary/10 transition-[1s] ease-in-out hover:bg-primary/80 hover:shadow-primary/10">
+        Enviar E-mail
+      </button>
+
+      <a href="https://wa.me/5545988239490?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="mt-auto text-sm text-secondary  transtion-300 hover:text-white hover:underline">
+        Ou, mande-me uma mensagem <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+  </form>
+</section>
+
+
+<!-- Footer com gradiente -->
 <div class="h-32 bg-gradient-to-t from-primary/10 to-transparent w-full"></div>
 <footer class="w-full bg-white/5 border-t border-white/20 h-24 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-8 p-4">
   <p class="text-sm text-gray-300">© 2025 Emanuel Garcia Langer. Todos os direitos reservados.</p>
   <p class="text-sm text-gray-300">Feito com ❤ por Emanuel</p>
 </footer>
 
-
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+<!-- Para a navbar suave -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const offset = window.innerWidth < 768 ? 150 : 250; 
           
-          e.preventDefault();
-
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
           
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-
-          
-          if (targetElement) {
-            // Altura do deslocamento (offset)
-            // Diminuído o offset para telas pequenas para melhor rolagem
-            const offset = window.innerWidth < 768 ? 150 : 250; 
-
-            
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-            
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
-        });
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
       });
     });
-  </script>
+  });
+</script>
+
+<script>
+  function aviso() {
+    container = document.getElementById('aviso')
+    container.className('border-green-100/50 border bg-green-600/20 mt-8 p-2 h-8 rounded text-sm w-full text-green-100')
+    conteiner.content.add('-> E-mail enviado com sucesso!')
+  }
+</script>
 </body>
 </html>
